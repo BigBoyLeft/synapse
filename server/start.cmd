@@ -1,0 +1,1 @@
+C:\dev\fivem\FXServer.exe +exec "server.cfg"

@@ -2,18 +2,16 @@
   "name": "synapse",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "db": "turbo db:push db:generate",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "eslint-config-synapse": "*",
     "prettier": "latest",
     "turbo": "latest"
   },
@@ -21,5 +19,5 @@
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "npm@8.19.3"
+  "packageManager": "pnpm@7.27.0"
 }
