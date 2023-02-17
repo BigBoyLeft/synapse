@@ -7,9 +7,10 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "module": "CommonJS",
-    "types": ["@types/node"],
+    "types": [],
     "lib": ["ES2020"],
     "strictPropertyInitialization": false
   },
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

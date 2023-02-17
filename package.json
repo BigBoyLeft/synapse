@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "db": "turbo db:push db:generate",
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "db": "turbo db:push db:generate --no-daemon",
+    "build": "turbo run build --no-daemon",
+    "dev": "turbo run dev --no-daemon",
+    "lint": "turbo run lint --no-daemon",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {

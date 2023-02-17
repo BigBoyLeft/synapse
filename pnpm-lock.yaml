@@ -35,9 +35,10 @@ importers:
     specifiers:
       '@citizenfx/client': 2.0.6284-1
       '@citizenfx/server': 2.0.6284-1
-      '@lib/client': ^0.0.0
+      '@lib/client': workspace:^0.0.0
       '@lib/database': '*'
-      '@lib/server': ^0.0.0
+      '@lib/server': workspace:^0.0.0
+      '@lib/shared': workspace:^0.0.0
       '@types/node': ^18.13.0
       eslint: ^7.32.0
       eslint-config-synapse: ^0.0.0
@@ -48,6 +49,7 @@ importers:
       '@lib/client': link:../../packages/lib-client
       '@lib/database': link:../../packages/database
       '@lib/server': link:../../packages/lib-server
+      '@lib/shared': link:../../packages/lib-shared
     devDependencies:
       '@types/node': 18.13.0
       eslint: 7.32.0
@@ -96,11 +98,13 @@ importers:
   packages/lib-client:
     specifiers:
       '@citizenfx/client': 2.0.6284-1
+      '@types/node': ^18.13.0
       eslint: ^7.32.0
       eslint-config-synapse: ^0.0.0
       tsconfig: ^0.0.0
     dependencies:
       '@citizenfx/client': 2.0.6284-1
+      '@types/node': 18.13.0
     devDependencies:
       eslint: 7.32.0
       eslint-config-synapse: link:../eslint-config-synapse
@@ -109,12 +113,14 @@ importers:
   packages/lib-server:
     specifiers:
       '@citizenfx/server': 2.0.6284-1
+      '@types/node': ^18.13.0
       chalk: ^5.2.0
       eslint: ^7.32.0
       eslint-config-synapse: ^0.0.0
       tsconfig: ^0.0.0
     dependencies:
       '@citizenfx/server': 2.0.6284-1
+      '@types/node': 18.13.0
       chalk: 5.2.0
     devDependencies:
       eslint: 7.32.0
@@ -831,7 +837,6 @@ packages:
 
   /@types/node/18.13.0:
     resolution: {integrity: sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==}
-    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}

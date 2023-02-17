@@ -1,26 +1,27 @@
 {
-  "name": "framework",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "node ../../packages/compiler/compiler.js -w",
-    "build": "node ../../packages/compiler/compiler.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@citizenfx/client": "2.0.6284-1",
-    "@citizenfx/server": "2.0.6284-1",
-    "@lib/client": "^0.0.0",
-    "@lib/database": "*",
-    "@lib/server": "^0.0.0"
-  },
-  "dependenciesMeta": {},
-  "devDependencies": {
-    "@types/node": "^18.13.0",
-    "eslint": "^7.32.0",
-    "eslint-config-synapse": "^0.0.0",
-    "tsconfig": "^0.0.0"
-  }
+    "name": "framework",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "node ../../packages/compiler/compiler.js -w",
+        "build": "node ../../packages/compiler/compiler.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@citizenfx/client": "2.0.6284-1",
+        "@citizenfx/server": "2.0.6284-1",
+        "@lib/client": "*",
+        "@lib/database": "*",
+        "@lib/server": "*",
+        "@lib/shared": "*"
+    },
+    "dependenciesMeta": {},
+    "devDependencies": {
+        "@types/node": "^18.13.0",
+        "eslint": "^7.32.0",
+        "eslint-config-synapse": "^0.0.0",
+        "tsconfig": "^0.0.0"
+    }
 }

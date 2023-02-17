@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@citizenfx/server": "2.0.6284-1",
+    "@types/node": "^18.13.0",
     "chalk": "^5.2.0"
   }
 }
