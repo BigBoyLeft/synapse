@@ -1,6 +1,5 @@
 import { PrismaClient } from "@lib/database";
-import { logger } from "@lib/server";
-import { Config } from "@lib/shared";
+import { logger, Config } from "@lib/server";
 
 export const db = new PrismaClient({
     datasources: { db: { url: Config.database } },

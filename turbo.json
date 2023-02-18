@@ -6,17 +6,14 @@
             "outputs": []
         },
         "dev": {
-            "dependsOn": ["^db:generate"],
+            "dependsOn": ["^db:migrate:deploy"],
             "cache": false
         },
         "build": {
-            "dependsOn": ["^db:generate"],
+            "dependsOn": ["^db:migrate:deploy"],
             "outputs": ["your-outputs-here"]
         },
-        "db:generate": {
-            "cache": false
-        },
-        "db:push": {
+        "db:migrate:deploy": {
             "cache": false
         }
     }

@@ -12,10 +12,10 @@
     "dependencies": {
         "@citizenfx/client": "2.0.6284-1",
         "@citizenfx/server": "2.0.6284-1",
-        "@lib/client": "*",
-        "@lib/database": "*",
-        "@lib/server": "*",
-        "@lib/shared": "*"
+        "@lib/client": "workspace:*",
+        "@lib/database": "workspace:*",
+        "@lib/server": "workspace:*",
+        "@lib/shared": "workspace:*"
     },
     "dependenciesMeta": {},
     "devDependencies": {

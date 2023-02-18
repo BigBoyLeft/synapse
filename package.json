@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "db": "turbo db:push db:generate --no-daemon",
+    "db": "turbo db:migrate:deploy --no-daemon",
     "build": "turbo run build --no-daemon",
     "dev": "turbo run dev --no-daemon",
     "lint": "turbo run lint --no-daemon",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-synapse": "*",
+    "eslint-config-synapse": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
   },

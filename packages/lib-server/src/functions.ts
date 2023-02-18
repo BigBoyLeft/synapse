@@ -1,11 +1,22 @@
+import { Config } from "./config";
+
 export const getSource = () => String(globalThis.source);
 
-export const getPlayerIdentifier = (player: string, identifier: string) => {
+export const getPlayerIdentifier = (player: string) => {
     const identifiers = getPlayerIdentifiers(player);
-    const result = identifiers.find((id) => id.startsWith(identifier));
+    const result = identifiers.find((id) =>
+        id.startsWith(Config.framework.identifier)
+    );
     return result;
 };
 
+/**
+ * Event handler
+ * @example
+ * Event["event name"]((data: unknown) => {
+ *    console.log(...args);
+ * });
+ */
 export const Event = new Proxy<{ [key: string]: Function }>(
     {},
     {
@@ -20,8 +31,3 @@ export const Event = new Proxy<{ [key: string]: Function }>(
         },
     }
 );
-
-// Example:
-// Event.playerConnecting((player: string) => {
-//     console.log(player);
-// });
