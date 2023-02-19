@@ -9,7 +9,9 @@
     "module": "CommonJS",
     "types": ["@citizenfx/server", "@types/node"],
     "lib": ["ES2020"],
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": ["node_modules"]
 }

@@ -174,10 +174,19 @@ importers:
 
   packages/lib-shared:
     specifiers:
+      '@citizenfx/client': 2.0.6284-1
+      '@citizenfx/server': 2.0.6284-1
+      '@types/node': ^18.14.0
       eslint: ^7.32.0
       eslint-config-synapse: ^0.0.0
+      reflect-metadata: ^0.1.13
       tsconfig: ^0.0.0
+    dependencies:
+      '@citizenfx/client': 2.0.6284-1
+      '@citizenfx/server': 2.0.6284-1
+      reflect-metadata: 0.1.13
     devDependencies:
+      '@types/node': 18.14.0
       eslint: 7.32.0
       eslint-config-synapse: link:../eslint-config-synapse
       tsconfig: link:../tsconfig
@@ -1455,7 +1464,6 @@ packages:
 
   /@types/node/18.14.0:
     resolution: {integrity: sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==}
-    dev: false
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -4471,6 +4479,10 @@ packages:
 
   /reading-time/1.5.0:
     resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
+    dev: false
+
+  /reflect-metadata/0.1.13:
+    resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==}
     dev: false
 
   /regenerator-runtime/0.13.11:

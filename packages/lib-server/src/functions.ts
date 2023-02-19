@@ -9,25 +9,3 @@ export const getPlayerIdentifier = (player: string) => {
     );
     return result;
 };
-
-/**
- * Event handler
- * @example
- * Event["event name"]((data: unknown) => {
- *    console.log(...args);
- * });
- */
-export const Event = new Proxy<{ [key: string]: Function }>(
-    {},
-    {
-        get: (target, prop) => {
-            const eventName = prop.toString();
-            return (
-                callback: (...args: any[]) => void,
-                net: boolean = false
-            ) => {
-                (net ? onNet : on)(eventName, callback);
-            };
-        },
-    }
-);

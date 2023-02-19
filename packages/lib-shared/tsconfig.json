@@ -1,16 +1,16 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Default",
-  "compilerOptions": {
-    "target": "ES2020",
-    "strict": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "module": "CommonJS",
-    "types": [],
-    "lib": ["ES2020"],
-    "strictPropertyInitialization": false
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Default",
+    "compilerOptions": {
+        "target": "ES2020",
+        "strict": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "CommonJS",
+        "types": ["@types/node", "@citizenfx/client", "@citizenfx/server"],
+        "lib": ["ES2020"],
+        "strictPropertyInitialization": false
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
 }

@@ -3,7 +3,7 @@ import { db } from "../..";
 import { user } from "@lib/database";
 
 export default class UserDB {
-    static async createUser(src: string, name: string): Promise<user | null> {
+    static async createUser(src: string, name: string): Promise<boolean> {
         let identifier = getPlayerIdentifier(src);
         if (!identifier) {
             logger.error(
@@ -21,17 +21,38 @@ export default class UserDB {
                     name: name,
                 },
             });
-        } catch (e) {
+        } catch (e: any) {
             logger.error(
-                `Failed to create user ${GetPlayerName(src)} (${src}) - ${e}`
+                `Failed to create user ${GetPlayerName(src)} (${src}) - ${
+                    e.message
+                }`
+            );
+        }
+
+        return user ? true : false;
+    }
+
+    static async checkUser(src: string): Promise<boolean> {
+        const identifier = getPlayerIdentifier(src);
+        if (!identifier) {
+            logger.error(
+                `Failed to check user ${GetPlayerName(
+                    src
+                )} (${src}) - identifier not found`
             );
         }
 
         logger.info(
-            `Created user ${GetPlayerName(src)} (${src}) - ${user?.id}`
+            `Checking user ${GetPlayerName(src)} (${src}) - ${identifier}`
         );
 
-        return user;
+        const user = await db.user.findUnique({
+            where: {
+                identifier: identifier!,
+            },
+        });
+
+        return user ? true : false;
     }
 
     static async getUser(src: string): Promise<user | null> {
